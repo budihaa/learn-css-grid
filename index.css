@@ -1,0 +1,46 @@
+.container{
+  height: 100%;
+  display: grid;
+
+  /* grid-template: rows / column */
+  grid-template: 100px auto 100px / repeat(12, 1fr);
+
+  /* 
+    grid-template-areas: create your own grid template with string;
+    replace your string with "." if you wanna make a space/span
+  */
+  grid-template-areas: 
+    "m m h h h h h h h h h h"
+    "m m c c c c c c c c c c"
+    "m m f f f f f f f f f f";
+
+  /* grid-gap = jarak setiap grid */
+  grid-gap: 10px;
+
+}
+
+.header{
+  /* artinya pake semua column dari ujung kiri sampe ke kanan */
+  /* grid-column: 3 / -1; */
+  
+  /* grid-area: masukin string sesuai huruf */
+  grid-area: h;
+}
+
+.menu{
+  /* grid-column: 1 / 3; */
+  /* grid-row: 1 / 3; */
+
+  grid-area: m;
+}
+
+.content{
+  /* grid-column: 3 / -1; */
+  grid-area: c;
+}
+
+.footer{
+  /* artinya pake semua column dari ujung kiri sampe ke kanan */
+  /* grid-column: 1 / -1; */
+  grid-area: f;
+}
